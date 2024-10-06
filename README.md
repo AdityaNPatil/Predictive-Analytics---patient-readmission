@@ -1,19 +1,11 @@
 # Predicting Hospital Readmissions
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Problem Statement](#problem-statement)
-3. [Solution Steps](#solution-steps)
-4. [Workflow](#workflow)
-5. [Data Description](#data-description)
-6. [Challenges](#challenges)
-7. [Technologies Used](#technologies-used)
-9. [How to Run](#how-to-run)
-
 ## Project Overview
 
 The primary goal of this project is to build a predictive model that can identify patients who are at high risk of hospital readmission within 30 days after their initial discharge. This predictive model will assist healthcare providers in proactively intervening and providing targeted interventions to reduce readmission rates and improve patient outcomes.
+
+## HDFS usage
+This uses HDFS to store the dataset and model and then the streamlit application utilizes the model to make predictions 
 
 ## Problem Statement
 
@@ -29,15 +21,9 @@ The healthcare industry faces challenges in predicting hospital readmissions acc
 
 4. **Model Evaluation:** Assess the performance of the predictive model using standard binary classification evaluation metrics such as accuracy, precision, recall, F1-score, ROC curve, and AUC.
 
-## Workflow
-
-![Hospital](https://github.com/asdesilva3/Predicting-Hospital-Readmissions/assets/148002331/d3a2f1e6-ecaa-4b90-9d1b-a1e5e81e722d)
-
 
 
 ## Data Description
-
-The dataset contains the following columns:
 
 - **Patient_ID**: Unique identifier for each patient.
 - **Age**: Age of the patient in years.
@@ -53,24 +39,11 @@ The dataset contains the following columns:
 - **A1C_Result**: Result of the A1C test, if available (e.g., Normal, Abnormal).
 - **Readmitted**: Indicates whether the patient was readmitted to the hospital within a certain time frame (e.g., Yes, No).
 
-
-## Challenges
-
-One specific challenge encountered in this project was the presence of many null values in the `A1C_Result` column. To address this, a classification model was developed to predict and fill in the missing values in the `A1C_Result` column based on other available features. Once the missing values were imputed, a predictive model for hospital readmission status was built using the completed dataset.
-
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Seaborn
-- Streamlit
-
-
 ## How to Run
 
-1. Install the required dependencies using `pip install -r requirements.txt`
+1. Install the required dependencies
+2. Run A_1C notebook , followed by ReplacingA1_C and finally Readmitted model notebook
+3. Run the Streamlit application using `streamlit run app.py`
 
-2. Run the Streamlit application using `streamlit run app.py`
+#### Credits : For dataset and model
+[asdesilva3](https://github.com/asdesilva3/Predicting-Hospital-Readmissions)
